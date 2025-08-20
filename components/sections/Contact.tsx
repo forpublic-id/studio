@@ -71,7 +71,7 @@ export default function Contact() {
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4 text-red-600 border-red-200 bg-red-50">
+          <Badge variant="outline" className="mb-4 text-gray-900 border-gray-300 bg-gray-100">
             <MessageSquare className="w-4 h-4 mr-2" />
             Let&apos;s Work Together
           </Badge>
@@ -87,8 +87,8 @@ export default function Contact() {
           {/* Contact Info & Consultation */}
           <div className="lg:col-span-1">
             {/* Free Consultation */}
-            <Card className="p-8 bg-gradient-to-br from-red-50 to-red-100 border-red-200 mb-8">
-              <div className="w-12 h-12 bg-red-600 text-white rounded-xl flex items-center justify-center mb-4">
+            <Card className="p-8 bg-gradient-to-br from-gray-50 to-gray-100 border-gray-300 mb-8">
+              <div className="w-12 h-12 bg-gray-900 text-white rounded-xl flex items-center justify-center mb-4">
                 <Calendar className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">
@@ -101,14 +101,14 @@ export default function Contact() {
               <div className="space-y-3 mb-6">
                 {consultationFeatures.map((feature: string, index: number) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
                     <span className="text-sm text-gray-700">{feature}</span>
                   </div>
                 ))}
               </div>
               
               <Button 
-                className="w-full bg-red-600 hover:bg-red-700 text-white"
+                className="w-full bg-gray-900 hover:bg-gray-800 text-white"
                 onClick={handleConsultationClick}
               >
                 {t('contact.form.booking.title')}
@@ -241,7 +241,7 @@ export default function Contact() {
                   </label>
                   <select 
                     name="organization_type" 
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
                     required
                   >
                     {organizationTypes.map((type) => (
@@ -260,7 +260,7 @@ export default function Contact() {
                   <textarea
                     rows={4}
                     placeholder={t('contact.form.fields.project.placeholder')}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
                   />
                 </div>
 
@@ -270,7 +270,7 @@ export default function Contact() {
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       {t('contact.form.fields.budget.label')}
                     </label>
-                    <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500">
+                    <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-gray-500">
                       {budgetRanges.map((range) => (
                         <option key={range.value} value={range.value}>
                           {range.label}
@@ -282,7 +282,7 @@ export default function Contact() {
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       {t('contact.form.fields.timeline.label')}
                     </label>
-                    <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500">
+                    <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-gray-500">
                       {timelines.map((timeline) => (
                         <option key={timeline.value} value={timeline.value}>
                           {timeline.label}
@@ -296,7 +296,7 @@ export default function Contact() {
                 <div className="pt-4">
                   <Button
                     type="submit"
-                    className="w-full bg-red-600 hover:bg-red-700 text-white py-3 text-lg font-medium"
+                    className="w-full bg-gray-900 hover:bg-gray-800 text-white py-3 text-lg font-medium"
                   >
                     <Send className="w-5 h-5 mr-2" />
                     {t('contact.form.submit')}

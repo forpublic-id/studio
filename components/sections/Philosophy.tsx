@@ -44,7 +44,7 @@ export default function Philosophy() {
     {
       key: 'agile',
       icon: Zap,
-      color: 'bg-red-50 text-red-600',
+      color: 'bg-gray-10 text-gray-900',
     },
     {
       key: 'capacityBuilding',
@@ -60,7 +60,7 @@ export default function Philosophy() {
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4 text-red-600 border-red-200 bg-red-50">
+          <Badge variant="outline" className="mb-4 text-gray-900 border-gray-300 bg-gray-10">
             <Eye className="w-4 h-4 mr-2" />
             Our Approach
           </Badge>
@@ -149,7 +149,7 @@ export default function Philosophy() {
           </div>
           
           <div className="text-center mt-8">
-            <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-xl font-medium transition-colors">
+            <button className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-3 rounded-xl font-medium transition-colors">
               Discuss Your Budget
             </button>
           </div>

@@ -56,7 +56,7 @@ export default function Portfolio() {
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4 text-red-600 border-red-200 bg-red-50">
+          <Badge variant="outline" className="mb-4 text-gray-900 border-gray-300 bg-gray-100">
             <Star className="w-4 h-4 mr-2" />
             Our Work
           </Badge>
@@ -130,7 +130,7 @@ export default function Portfolio() {
                         href={item.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-red-600 hover:text-red-700 font-medium text-sm flex items-center group"
+                        className="text-gray-900 hover:text-gray-700 font-medium text-sm flex items-center group"
                       >
                         Visit Live App
                         <ExternalLink className="w-4 h-4 ml-1 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -158,7 +158,7 @@ export default function Portfolio() {
               
               return (
                 <Card key={index} className="p-6 text-center bg-white border border-gray-200 hover:shadow-lg transition-shadow">
-                  <div className="w-12 h-12 bg-red-50 text-red-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 bg-gray-100 text-gray-700 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-6 h-6" />
                   </div>
                   <div className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
@@ -187,7 +187,7 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 gap-8">
             {testimonials.map((testimonial: { quote: string; author: string; role: string; organization: string }, index: number) => (
               <Card key={index} className="p-8 bg-gray-50 border-0 relative">
-                <Quote className="w-8 h-8 text-red-200 mb-4" />
+                <Quote className="w-8 h-8 text-gray-400 mb-4" />
                 <p className="text-gray-700 mb-6 italic">
                   &ldquo;{testimonial.quote}&rdquo;
                 </p>

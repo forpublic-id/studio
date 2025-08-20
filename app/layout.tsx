@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://studio.forpublic.id'),
   title: 'ForPublic.id Studio - Public Good Software Development',
   description: 'Public Good Software Studio - Building transparent, accessible technology that serves communities. Partnership hub for government, NGO, and civic organizations.',
 }

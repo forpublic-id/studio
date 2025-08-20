@@ -20,22 +20,22 @@ export async function generateMetadata({
   // const t = await getTranslations({ locale })
   
   const baseUrl = 'https://studio.forpublic.id'
-  const title = 'ForPublic.id Studio - Public Good Software Development'
-  const description = 'Public Good Software Studio - Building transparent, accessible technology that serves communities. Partnership hub for government, NGO, and civic organizations.'
+  const title = 'ForPublic.id Studio - Hire Us or Collaborate on Public Good Technology'
+  const description = 'Professional software development services for public good organizations. Hire us for custom projects or collaborate on non-profit initiatives.'
   
   return {
     metadataBase: new URL(baseUrl),
     title,
     description,
     keywords: [
-      'public good software',
-      'government technology',
-      'NGO solutions', 
-      'civic technology',
-      'digital transformation',
-      'transparency platform',
-      'public interest tech',
-      'Indonesia software development',
+      'hire software developers',
+      'public good technology',
+      'non-profit collaboration',
+      'government software development',
+      'NGO technology solutions',
+      'civic tech consulting',
+      'professional software services',
+      'Indonesia developers',
       'forpublic.id'
     ],
     authors: [{ name: 'ForPublic.id Studio' }],
@@ -102,7 +102,7 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider messages={messages}>
       <div className="min-h-screen flex flex-col">
-        <Header />
+        <Header currentLocale={locale} />
         <main className="flex-1">
           {children}
         </main>

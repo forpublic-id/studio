@@ -1,4 +1,4 @@
-import { supportedLocales, defaultLocale } from '@/lib/constants'
+import { supportedLocales, defaultLocale } from '@/lib/constants/routes'
 
 export type Locale = (typeof supportedLocales)[number]
 export type DefaultLocale = typeof defaultLocale

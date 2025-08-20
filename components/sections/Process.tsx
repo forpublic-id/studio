@@ -49,7 +49,7 @@ export default function Process() {
   const timelineExamples = [
     { key: 'small', icon: FileText, color: 'bg-green-100 text-green-700' },
     { key: 'medium', icon: DollarSign, color: 'bg-yellow-100 text-yellow-700' },
-    { key: 'large', icon: Calendar, color: 'bg-red-100 text-red-700' },
+    { key: 'large', icon: Calendar, color: 'bg-gray-100 text-gray-700' },
   ]
 
   const partnershipOptions = t.raw('process.partnership.options')
@@ -59,7 +59,7 @@ export default function Process() {
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4 text-red-600 border-red-200 bg-red-50">
+          <Badge variant="outline" className="mb-4 text-gray-900 border-gray-300 bg-gray-100">
             <ArrowRight className="w-4 h-4 mr-2" />
             How We Work
           </Badge>
@@ -145,7 +145,7 @@ export default function Process() {
                   <h4 className="text-xl font-bold text-gray-900 mb-2">
                     {t(`process.timeline.${example.key}.title`)}
                   </h4>
-                  <div className="text-lg font-semibold text-red-600 mb-4">
+                  <div className="text-lg font-semibold text-gray-900 mb-4">
                     {t(`process.timeline.${example.key}.duration`)}
                   </div>
                   <p className="text-gray-600 text-sm">
@@ -170,9 +170,9 @@ export default function Process() {
           
           <div className="grid md:grid-cols-2 gap-6">
             {partnershipOptions.map((option: { title: string; description: string }, index: number) => (
-              <Card key={index} className="p-6 bg-white border border-gray-200 hover:border-red-200 hover:shadow-md transition-all">
+              <Card key={index} className="p-6 bg-white border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all">
                 <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-red-50 text-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-gray-100 text-gray-900 rounded-xl flex items-center justify-center flex-shrink-0">
                     <span className="font-bold text-sm">{String(index + 1).padStart(2, '0')}</span>
                   </div>
                   <div>
@@ -185,7 +185,7 @@ export default function Process() {
           </div>
           
           <div className="text-center mt-8">
-            <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-xl font-medium transition-colors">
+            <button className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-3 rounded-xl font-medium transition-colors">
               Discuss Partnership Options
             </button>
           </div>

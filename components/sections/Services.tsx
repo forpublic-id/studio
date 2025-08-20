@@ -26,8 +26,8 @@ export default function Services() {
     {
       key: 'ngoSolutions', 
       icon: Heart,
-      color: 'bg-red-500',
-      lightColor: 'bg-red-50 text-red-600',
+      color: 'bg-gray-100',
+      lightColor: 'bg-gray-100 text-gray-900',
     },
     {
       key: 'publicInterestTech',
@@ -42,7 +42,7 @@ export default function Services() {
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4 text-red-600 border-red-200 bg-red-50">
+          <Badge variant="outline" className="mb-4 text-gray-900 border-gray-300 bg-gray-100">
             <Database className="w-4 h-4 mr-2" />
             Specialized Solutions
           </Badge>
@@ -86,7 +86,7 @@ export default function Services() {
                 </div>
                 
                 <div className="mt-6 pt-6 border-t border-gray-100">
-                  <button className="text-red-600 hover:text-red-700 font-medium text-sm flex items-center group">
+                  <button className="text-gray-900 hover:text-gray-700 font-medium text-sm flex items-center group">
                     Learn More
                     <ArrowUpRight className="w-4 h-4 ml-1 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </button>
@@ -99,8 +99,8 @@ export default function Services() {
         {/* Call to Action */}
         <div className="text-center bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100">
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <BarChart3 className="w-6 h-6 text-red-600" />
-            <Badge variant="outline" className="text-red-600 border-red-200 bg-red-50">
+            <BarChart3 className="w-6 h-6 text-gray-900" />
+            <Badge variant="outline" className="text-gray-900 border-gray-300 bg-gray-100">
               Custom Solutions
             </Badge>
           </div>
@@ -110,7 +110,7 @@ export default function Services() {
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
             We work closely with organizations to understand unique challenges and develop tailored technology solutions that create real impact.
           </p>
-          <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-xl font-medium transition-colors">
+          <button className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-3 rounded-xl font-medium transition-colors">
             Start a Conversation
           </button>
         </div>

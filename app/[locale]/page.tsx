@@ -1,21 +1,19 @@
 import Hero from '@/components/sections/Hero'
-import Services from '@/components/sections/Services'
-import Philosophy from '@/components/sections/Philosophy'
-import Portfolio from '@/components/sections/Portfolio'
-import Process from '@/components/sections/Process'
-import Team from '@/components/sections/Team'
-import Contact from '@/components/sections/Contact'
+import TwoOptions from '@/components/sections/TwoOptions'
+import ContactSimple from '@/components/sections/ContactSimple'
 
-export default function HomePage() {
+interface HomePageProps {
+  params: Promise<{ locale: string }>
+}
+
+export default async function HomePage({ params }: HomePageProps) {
+  const { locale } = await params
+  
   return (
     <div className="min-h-screen">
-      <Hero />
-      <Services />
-      <Philosophy />
-      <Portfolio />
-      <Process />
-      <Team />
-      <Contact />
+      <Hero locale={locale} />
+      <TwoOptions locale={locale} />
+      <ContactSimple locale={locale} />
     </div>
   )
 }

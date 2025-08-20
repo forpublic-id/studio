@@ -2,7 +2,7 @@
 
 import { usePathname, useRouter } from 'next/navigation'
 import { useCallback, useMemo } from 'react'
-import { supportedLocales, defaultLocale, type Locale } from '@/lib/constants'
+import { supportedLocales, defaultLocale, type Locale } from '@/lib/constants/routes'
 
 export function useLocale() {
   const pathname = usePathname()

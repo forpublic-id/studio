@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/routing'
 import { Github, Twitter, Linkedin } from 'lucide-react'
 
 interface FooterProps {
@@ -10,7 +10,6 @@ interface FooterProps {
 }
 
 export default function Footer({ variant = 'full', className = '' }: FooterProps) {
-  const t = useTranslations()
 
   if (variant === 'simple') {
     return (
@@ -27,12 +26,12 @@ export default function Footer({ variant = 'full', className = '' }: FooterProps
               />
             </div>
             <span className="text-lg font-bold">
-              ForPublic<span className="text-red-600">.id</span>
+              ForPublic<span className="text-white">.id</span>
               <span className="text-sm text-gray-400 ml-1">Studio</span>
             </span>
           </div>
           <p className="text-sm text-gray-300">
-            {t('footer.copyright')}
+            © 2025 ForPublic.id Studio. All rights reserved.
           </p>
         </div>
       </footer>
@@ -56,76 +55,76 @@ export default function Footer({ variant = 'full', className = '' }: FooterProps
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-bold">
-                  ForPublic<span className="text-red-600">.id</span>
+                  ForPublic<span className="text-white">.id</span>
                 </span>
                 <span className="text-xs text-gray-400 -mt-1">Studio</span>
               </div>
             </div>
-            <p className="text-gray-300 text-sm">{t('footer.description')}</p>
+            <p className="text-gray-300 text-sm">Professional software development services for public good organizations</p>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">{t('footer.sections.services')}</h4>
+            <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
-                <a
-                  href="#services"
+                <Link
+                  href="/how-we-work"
                   className="hover:text-white transition-colors"
                 >
-                  {t('footer.links.digitalTransformation')}
-                </a>
+                  Professional Services
+                </Link>
               </li>
               <li>
                 <a
-                  href="#services"
+                  href="#collaborate"
                   className="hover:text-white transition-colors"
                 >
-                  {t('footer.links.ngoSolutions')}
+                  Non-Profit Collaboration
                 </a>
               </li>
               <li>
-                <a
-                  href="#services"
+                <Link
+                  href="/how-we-work"
                   className="hover:text-white transition-colors"
                 >
-                  {t('footer.links.publicTech')}
+                  Custom Development
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold mb-4">Company</h4>
+            <ul className="space-y-2 text-sm text-gray-300">
+              <li>
+                <Link href="/work" className="hover:text-white transition-colors">
+                  Our Work
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:text-white transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/how-we-work" className="hover:text-white transition-colors">
+                  How We Work
+                </Link>
+              </li>
+              <li>
+                <a href="#contact" className="hover:text-white transition-colors">
+                  Contact
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">{t('footer.sections.company')}</h4>
-            <ul className="space-y-2 text-sm text-gray-300">
-              <li>
-                <a href="#portfolio" className="hover:text-white transition-colors">
-                  {t('footer.links.portfolio')}
-                </a>
-              </li>
-              <li>
-                <a href="#philosophy" className="hover:text-white transition-colors">
-                  {t('footer.links.about')}
-                </a>
-              </li>
-              <li>
-                <a href="#team" className="hover:text-white transition-colors">
-                  {t('footer.links.team')}
-                </a>
-              </li>
-              <li>
-                <a href="#process" className="hover:text-white transition-colors">
-                  {t('footer.links.process')}
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4">{t('footer.sections.resources')}</h4>
+            <h4 className="font-semibold mb-4">Resources</h4>
             <ul className="space-y-2 text-sm text-gray-300 mb-4">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  {t('footer.links.blog')}
+                  Blog
                 </a>
               </li>
               <li>
@@ -135,7 +134,7 @@ export default function Footer({ variant = 'full', className = '' }: FooterProps
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
                 >
-                  {t('footer.links.openSource')}
+                  Open Source
                 </a>
               </li>
               <li>
@@ -145,12 +144,12 @@ export default function Footer({ variant = 'full', className = '' }: FooterProps
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
                 >
-                  {t('footer.links.mainWebsite')}
+                  Main Website
                 </a>
               </li>
             </ul>
             
-            <h4 className="font-semibold mb-4">{t('footer.connect')}</h4>
+            <h4 className="font-semibold mb-4">Connect</h4>
             <div className="flex space-x-4 mb-4">
               <a
                 href="https://github.com/forpublic-id"
@@ -182,13 +181,13 @@ export default function Footer({ variant = 'full', className = '' }: FooterProps
             </div>
             
             <div className="text-sm text-gray-300">
-              <p>{t('footer.email')}</p>
+              <p>studio@forpublic.id</p>
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-300">
-          <p>{t('footer.copyright')}</p>
+          <p>© 2025 ForPublic.id Studio. All rights reserved. Made with ❤️ for public good.</p>
         </div>
       </div>
     </footer>

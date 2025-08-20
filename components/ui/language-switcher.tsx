@@ -44,7 +44,7 @@ export function LanguageSwitcher({ currentLocale }: { currentLocale: string }) {
       <Button
         variant="outline"
         size="sm"
-        className="flex items-center gap-2 border-gray-200 hover:border-red-600 bg-transparent"
+        className="flex items-center gap-2 border-gray-200 hover:border-gray-900 bg-transparent"
         disabled={isPending}
       >
         <Globe className="w-4 h-4" />
@@ -59,7 +59,7 @@ export function LanguageSwitcher({ currentLocale }: { currentLocale: string }) {
             onClick={() => handleLanguageChange(language.code)}
             disabled={isPending || locale === language.code}
             className={`w-full px-3 py-2 text-left text-sm hover:bg-gray-50 first:rounded-t-lg last:rounded-b-lg flex items-center gap-2 transition-colors disabled:opacity-50 cursor-pointer ${
-              locale === language.code ? 'bg-red-50 text-red-600' : 'text-gray-700'
+              locale === language.code ? 'bg-gray-10 text-gray-900' : 'text-gray-700'
             }`}
           >
             <span>{language.flag}</span>

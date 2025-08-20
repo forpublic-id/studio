@@ -38,7 +38,7 @@ export default function Team() {
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4 text-red-600 border-red-200 bg-red-50">
+          <Badge variant="outline" className="mb-4 text-gray-900 border-gray-300 bg-gray-100">
             <Users className="w-4 h-4 mr-2" />
             Our Expertise
           </Badge>
@@ -65,7 +65,7 @@ export default function Team() {
               return (
                 <Card key={index} className="p-8 bg-white border border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all">
                   <div className="flex items-start space-x-4">
-                    <div className="w-14 h-14 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-14 h-14 bg-gray-100 text-gray-900 rounded-2xl flex items-center justify-center flex-shrink-0">
                       <Icon className="w-7 h-7" />
                     </div>
                     <div className="flex-1">
@@ -199,14 +199,14 @@ export default function Team() {
         </div>
         
         {/* Call to Action */}
-        <div className="text-center mt-16 bg-gradient-to-r from-red-600 to-red-700 rounded-3xl p-8 md:p-12 text-white">
+        <div className="text-center mt-16 bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 md:p-12 text-white">
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
             Ready to Work Together?
           </h3>
-          <p className="text-red-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
             Let&apos;s discuss how our expertise can help your organization create meaningful impact through technology.
           </p>
-          <button className="bg-white text-red-600 hover:bg-gray-50 px-8 py-3 rounded-xl font-medium transition-colors">
+          <button className="bg-white text-gray-900 hover:bg-gray-50 px-8 py-3 rounded-xl font-medium transition-colors">
             Start a Partnership
           </button>
         </div>
