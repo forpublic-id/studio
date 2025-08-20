@@ -59,7 +59,7 @@ export default function Team() {
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {competencies.map((competency: any, index: number) => {
+            {competencies.map((competency: { title: string; description: string; tech: string[] }, index: number) => {
               const Icon = competencyIcons[index] || Code
               
               return (
@@ -204,7 +204,7 @@ export default function Team() {
             Ready to Work Together?
           </h3>
           <p className="text-red-100 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our expertise can help your organization create meaningful impact through technology.
+            Let&apos;s discuss how our expertise can help your organization create meaningful impact through technology.
           </p>
           <button className="bg-white text-red-600 hover:bg-gray-50 px-8 py-3 rounded-xl font-medium transition-colors">
             Start a Partnership

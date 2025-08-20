@@ -56,7 +56,7 @@ export default function Contact() {
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4 text-red-600 border-red-200 bg-red-50">
             <MessageSquare className="w-4 h-4 mr-2" />
-            Let's Work Together
+            Let&apos;s Work Together
           </Badge>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
             {t('contact.title')}

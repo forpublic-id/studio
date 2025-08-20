@@ -1,5 +1,5 @@
 import { NextIntlClientProvider } from 'next-intl'
-import { getMessages, getTranslations } from 'next-intl/server'
+import { getMessages } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
@@ -8,13 +8,14 @@ import type { Metadata } from 'next'
 
 type Props = {
   children: React.ReactNode
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }
 
 export async function generateMetadata({ 
-  params: { locale } 
+  params 
 }: Props): Promise<Metadata> {
-  const t = await getTranslations({ locale })
+  const { locale } = await params
+  // const t = await getTranslations({ locale })
   
   const title = 'ForPublic.id Studio - Public Good Software Development'
   const description = 'Public Good Software Studio - Building transparent, accessible technology that serves communities. Partnership hub for government, NGO, and civic organizations.'
@@ -85,9 +86,10 @@ export async function generateMetadata({
 
 export default async function LocaleLayout({
   children,
-  params: { locale },
+  params,
 }: Props) {
-  if (!routing.locales.includes(locale as any)) {
+  const { locale } = await params
+  if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
     notFound()
   }
 

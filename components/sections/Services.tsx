@@ -9,16 +9,9 @@ import {
   GraduationCap, 
   Database,
   BarChart3,
-  Users,
   CheckCircle,
   ArrowUpRight
 } from 'lucide-react'
-
-const serviceIcons = {
-  digitalTransformation: Building2,
-  ngoSolutions: Heart, 
-  publicInterestTech: GraduationCap,
-}
 
 export default function Services() {
   const t = useTranslations()

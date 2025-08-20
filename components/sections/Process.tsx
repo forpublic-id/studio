@@ -169,7 +169,7 @@ export default function Process() {
           </div>
           
           <div className="grid md:grid-cols-2 gap-6">
-            {partnershipOptions.map((option: any, index: number) => (
+            {partnershipOptions.map((option: { title: string; description: string }, index: number) => (
               <Card key={index} className="p-6 bg-white border border-gray-200 hover:border-red-200 hover:shadow-md transition-all">
                 <div className="flex items-start space-x-4">
                   <div className="w-10 h-10 bg-red-50 text-red-600 rounded-xl flex items-center justify-center flex-shrink-0">

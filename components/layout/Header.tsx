@@ -40,24 +40,24 @@ export default function Header() {
           >
             {t('header.nav.home')}
           </Link>
-          <Link 
-            href="/#services" 
+          <a 
+            href="#services" 
             className="text-gray-600 hover:text-red-600 transition-colors"
           >
             {t('header.nav.services')}
-          </Link>
-          <Link 
-            href="/#portfolio" 
+          </a>
+          <a 
+            href="#portfolio" 
             className="text-gray-600 hover:text-red-600 transition-colors"
           >
             {t('header.nav.portfolio')}
-          </Link>
-          <Link 
-            href="/#about" 
+          </a>
+          <a 
+            href="#about" 
             className="text-gray-600 hover:text-red-600 transition-colors"
           >
             {t('header.nav.about')}
-          </Link>
+          </a>
           
           <LanguageSwitcher />
           
@@ -67,7 +67,7 @@ export default function Header() {
             className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white bg-transparent"
             asChild
           >
-            <Link href="/#contact">{t('header.nav.contact')}</Link>
+            <a href="#contact">{t('header.nav.contact')}</a>
           </Button>
         </nav>
         

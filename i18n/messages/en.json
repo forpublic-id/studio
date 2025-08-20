@@ -315,6 +315,431 @@
       "emailOnly": "Email only"
     }
   },
+  "services": {
+    "title": "Our Services",
+    "description": "Specialized technology solutions for government, NGOs, and organizations focused on public interest",
+    "items": {
+      "digitalTransformation": {
+        "title": "Government Digital Transformation",
+        "description": "Transparency platforms, public service digitization",
+        "features": [
+          "Public data management systems",
+          "Government transparency portals",
+          "Administrative service digitization",
+          "Analytics dashboards for decision making"
+        ]
+      },
+      "ngoSolutions": {
+        "title": "NGO & Non-Profit Solutions",
+        "description": "Impact tracking, community engagement tools",
+        "features": [
+          "Social program management systems",
+          "Crowdfunding and donation platforms",
+          "Monitoring and evaluation tools",
+          "Community engagement platforms"
+        ]
+      },
+      "publicInterestTech": {
+        "title": "Public Interest Technology",
+        "description": "Education, health, environmental solutions",
+        "features": [
+          "Community health information systems",
+          "E-learning and education platforms",
+          "Environmental monitoring tools",
+          "Civic engagement applications"
+        ]
+      }
+    }
+  },
+  "philosophy": {
+    "title": "Philosophy & Approach",
+    "description": "Development principles that prioritize public interest",
+    "principles": {
+      "openSource": {
+        "title": "Open Source First",
+        "description": "Developing open solutions that can be accessed and contributed by the community"
+      },
+      "communityCentered": {
+        "title": "Community-Centered",
+        "description": "Every solution is designed with direct involvement from user communities"
+      },
+      "accessibility": {
+        "title": "Accessibility Priority",
+        "description": "Ensuring technology can be accessed by all levels of society"
+      }
+    },
+    "approach": {
+      "title": "Collaboration Models",
+      "coDesign": {
+        "title": "Co-Design",
+        "description": "Designing together with stakeholders and end users"
+      },
+      "agile": {
+        "title": "Agile Development",
+        "description": "Iterative development with continuous feedback"
+      },
+      "capacityBuilding": {
+        "title": "Capacity Building",
+        "description": "Knowledge transfer and empowerment of local teams"
+      }
+    },
+    "pricing": {
+      "title": "Flexible Pricing",
+      "description": "Pricing model that can be adjusted to organizational capacity",
+      "options": [
+        "Sliding scale based on organizational budget",
+        "Pro-bono for high-impact initiatives",
+        "Partnership model for long-term sustainability"
+      ]
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio & Showcase",
+    "description": "Real work that provides positive impact for the community",
+    "ecosystem": {
+      "title": "ForPublic.id Ecosystem",
+      "items": {
+        "holiday": {
+          "title": "Holiday Calendar",
+          "description": "Indonesian holiday calendar with accurate data and open API",
+          "impact": "100K+ monthly users",
+          "tech": ["Next.js", "TypeScript", "Vercel"]
+        },
+        "budget": {
+          "title": "Budget Transparency",
+          "description": "Government budget transparency platform with interactive visualization",
+          "impact": "Coming Soon",
+          "tech": ["React", "D3.js", "PostgreSQL"]
+        },
+        "salary": {
+          "title": "Public Salary Database",
+          "description": "Civil servant and public official salary database for transparency",
+          "impact": "Coming Soon",
+          "tech": ["Next.js", "Prisma", "Supabase"]
+        },
+        "plan": {
+          "title": "Development Plans",
+          "description": "Access to spatial planning and development plans with public participation features",
+          "impact": "Coming Soon",
+          "tech": ["GIS", "MapBox", "PostgreSQL"]
+        }
+      }
+    },
+    "achievements": {
+      "title": "Technical Achievements",
+      "items": [
+        {
+          "metric": "99.9%",
+          "label": "Uptime",
+          "description": "System reliability for public services"
+        },
+        {
+          "metric": "< 2s",
+          "label": "Load Time",
+          "description": "Optimal performance for fast access"
+        },
+        {
+          "metric": "100%",
+          "label": "Mobile Ready",
+          "description": "All applications responsive and mobile-first"
+        },
+        {
+          "metric": "WCAG 2.1",
+          "label": "Accessibility",
+          "description": "International accessibility standards"
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "Client Testimonials",
+      "items": [
+        {
+          "quote": "Very helpful solution for public data transparency. The team is very responsive and understands our needs.",
+          "author": "Regional Government Official",
+          "role": "Government Official",
+          "organization": "Placeholder"
+        },
+        {
+          "quote": "User-friendly platform that greatly helps in monitoring our programs.",
+          "author": "NGO Coordinator",
+          "role": "Program Manager",
+          "organization": "Placeholder"
+        }
+      ]
+    }
+  },
+  "process": {
+    "title": "Collaboration Process",
+    "description": "Systematic steps to produce targeted technology solutions",
+    "steps": {
+      "assessment": {
+        "title": "Impact Assessment",
+        "description": "In-depth analysis of needs and potential solution impact",
+        "duration": "1-2 weeks",
+        "deliverables": [
+          "Requirements analysis",
+          "Stakeholder mapping",
+          "Impact measurement framework",
+          "Technical feasibility study"
+        ]
+      },
+      "coDesign": {
+        "title": "Co-Design",
+        "description": "Designing solutions together with stakeholders and users",
+        "duration": "2-3 weeks",
+        "deliverables": [
+          "User journey mapping",
+          "Wireframes and prototypes",
+          "Technical architecture",
+          "Project timeline and milestones"
+        ]
+      },
+      "development": {
+        "title": "Agile Development",
+        "description": "Iterative development with continuous feedback",
+        "duration": "8-12 weeks",
+        "deliverables": [
+          "MVP (Minimum Viable Product)",
+          "Testing and quality assurance",
+          "Complete documentation",
+          "Training materials"
+        ]
+      },
+      "support": {
+        "title": "Launch & Support",
+        "description": "Deployment, monitoring, and ongoing support",
+        "duration": "Ongoing",
+        "deliverables": [
+          "Production deployment",
+          "Monitoring and analytics setup",
+          "User training and onboarding",
+          "Maintenance and updates"
+        ]
+      }
+    },
+    "timeline": {
+      "title": "Timeline Examples",
+      "small": {
+        "title": "Small Project",
+        "duration": "6-8 weeks",
+        "description": "Simple dashboard, landing page, or specific tools"
+      },
+      "medium": {
+        "title": "Medium Project",
+        "duration": "3-4 months",
+        "description": "Multi-user platform, data management system, or mobile application"
+      },
+      "large": {
+        "title": "Large Project",
+        "duration": "6+ months",
+        "description": "Enterprise system, full digital transformation, or platform ecosystem"
+      }
+    },
+    "partnership": {
+      "title": "Partnership Models",
+      "description": "Various ways to collaborate according to needs and budget",
+      "options": [
+        {
+          "title": "Fixed Price Project",
+          "description": "Fixed budget for clear and defined scope"
+        },
+        {
+          "title": "Retainer Partnership",
+          "description": "Long-term collaboration with monthly retainer"
+        },
+        {
+          "title": "Revenue Sharing",
+          "description": "Strategic partnership with revenue or impact sharing"
+        },
+        {
+          "title": "Grant-Funded",
+          "description": "Grant or funding-supported projects for social impact"
+        }
+      ]
+    }
+  },
+  "team": {
+    "title": "Team & Expertise",
+    "description": "Experienced team focused on public-good technology",
+    "competencies": {
+      "title": "Core Competencies",
+      "items": [
+        {
+          "title": "Full-Stack Development",
+          "description": "Modern web technologies for end-to-end solutions",
+          "tech": ["React/Next.js", "Node.js", "PostgreSQL", "TypeScript", "Python"]
+        },
+        {
+          "title": "Public-Good UX/UI",
+          "description": "Design that prioritizes accessibility and usability",
+          "tech": ["Figma", "Design Systems", "WCAG Guidelines", "User Research"]
+        },
+        {
+          "title": "Data Analytics & Visualization",
+          "description": "Turning complex data into actionable insights",
+          "tech": ["D3.js", "Python", "R", "Tableau", "Power BI"]
+        },
+        {
+          "title": "DevOps & Infrastructure",
+          "description": "Reliable and scalable deployment",
+          "tech": ["Vercel", "AWS", "Docker", "CI/CD", "Monitoring"]
+        }
+      ]
+    },
+    "expertise": {
+      "title": "Technology Expertise",
+      "description": "Technology stack aligned with public service needs",
+      "frontend": {
+        "title": "Frontend",
+        "items": ["Next.js", "React", "TypeScript", "Tailwind CSS", "PWA"]
+      },
+      "backend": {
+        "title": "Backend",
+        "items": ["Node.js", "Python", "PostgreSQL", "Prisma", "Supabase"]
+      },
+      "data": {
+        "title": "Data & Analytics",
+        "items": ["D3.js", "Chart.js", "Python", "R", "SQL"]
+      },
+      "infrastructure": {
+        "title": "Infrastructure",
+        "items": ["Vercel", "AWS", "Docker", "GitHub Actions", "Monitoring"]
+      }
+    },
+    "openSource": {
+      "title": "Open Source Contributions",
+      "description": "Active contributions to developer community and public good",
+      "contributions": [
+        "ForPublic.id ecosystem - Transparency platform for Indonesia",
+        "Public data APIs - Open APIs for public data",
+        "Accessibility tools - Libraries for web accessibility",
+        "Government tech templates - Starter templates for gov tech"
+      ]
+    },
+    "community": {
+      "title": "Community Involvement",
+      "description": "Active involvement in tech for good community",
+      "activities": [
+        "Speaker at civic tech and government innovation conferences",
+        "Mentor for social impact startups and non-profits",
+        "Contributor in policy discussions for digital governance",
+        "Workshop organizer for NGO and government capacity building"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Start Partnership",
+    "description": "Let's discuss how technology can provide positive impact for your community",
+    "consultation": {
+      "title": "Free Consultation",
+      "description": "Free 30-minute consultation to discuss needs and opportunities",
+      "features": [
+        "Problem assessment",
+        "Technology recommendations",
+        "Rough timeline & budget estimate",
+        "Partnership options"
+      ]
+    },
+    "form": {
+      "title": "Partnership Inquiry",
+      "fields": {
+        "name": {
+          "label": "Full Name",
+          "placeholder": "Enter your full name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "name@organization.com"
+        },
+        "organization": {
+          "label": "Organization",
+          "placeholder": "Organization/institution name"
+        },
+        "role": {
+          "label": "Position/Title",
+          "placeholder": "Your position in the organization"
+        },
+        "type": {
+          "label": "Organization Type",
+          "options": {
+            "government": "Government",
+            "ngo": "NGO/Non-Profit",
+            "international": "International Organization",
+            "civic": "Civic Group",
+            "other": "Other"
+          }
+        },
+        "project": {
+          "label": "Project Description",
+          "placeholder": "Tell us about the needs or challenges you want to solve..."
+        },
+        "budget": {
+          "label": "Budget Range",
+          "options": {
+            "small": "< $10,000",
+            "medium": "$10,000 - $50,000",
+            "large": "$50,000 - $100,000",
+            "enterprise": "> $100,000",
+            "grant": "Grant-funded",
+            "discuss": "Let's discuss"
+          }
+        },
+        "timeline": {
+          "label": "Timeline",
+          "options": {
+            "urgent": "< 1 month",
+            "fast": "1-3 months",
+            "normal": "3-6 months",
+            "flexible": "6+ months",
+            "discuss": "Flexible"
+          }
+        }
+      },
+      "submit": "Send Partnership Inquiry",
+      "booking": {
+        "title": "Book Free Consultation",
+        "description": "Schedule 30-minute call for initial discussion"
+      }
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "studio@forpublic.id",
+      "response": "Response time: < 24 hours",
+      "availability": "Available for international partnerships",
+      "timezone": "Based in Indonesia (UTC+7)"
+    },
+    "social": {
+      "title": "Connect With Us",
+      "links": {
+        "github": "Follow our work",
+        "linkedin": "Professional updates",
+        "twitter": "Latest updates"
+      }
+    }
+  },
+  "footer": {
+    "description": "Public Good Software Studio - Building technology for the people.",
+    "sections": {
+      "services": "Services",
+      "company": "Company",
+      "resources": "Resources"
+    },
+    "links": {
+      "digitalTransformation": "Digital Transformation",
+      "ngoSolutions": "NGO Solutions",
+      "publicTech": "Public Interest Tech",
+      "portfolio": "Portfolio",
+      "about": "About Us",
+      "process": "Work Process",
+      "team": "Team",
+      "blog": "Blog",
+      "openSource": "Open Source",
+      "mainWebsite": "ForPublic.id"
+    },
+    "connect": "Connect",
+    "email": "studio@forpublic.id",
+    "copyright": "© 2024 ForPublic.id Studio. All rights reserved. Made with ❤️ for public good."
+  },
   "applications": {
     "page": {
       "title": "Explore Applications",

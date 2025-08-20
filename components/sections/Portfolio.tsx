@@ -152,7 +152,7 @@ export default function Portfolio() {
           </div>
           
           <div className="grid md:grid-cols-4 gap-8">
-            {achievements.map((achievement: any, index: number) => {
+            {achievements.map((achievement: { metric: string; label: string; description: string }, index: number) => {
               const icons = [Clock, Zap, Smartphone, Shield]
               const Icon = icons[index] || Clock
               
@@ -185,11 +185,11 @@ export default function Portfolio() {
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial: any, index: number) => (
+            {testimonials.map((testimonial: { quote: string; author: string; role: string; organization: string }, index: number) => (
               <Card key={index} className="p-8 bg-gray-50 border-0 relative">
                 <Quote className="w-8 h-8 text-red-200 mb-4" />
                 <p className="text-gray-700 mb-6 italic">
-                  "{testimonial.quote}"
+                  &ldquo;{testimonial.quote}&rdquo;
                 </p>
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center">

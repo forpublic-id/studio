@@ -3,7 +3,6 @@
 import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
-import { Link } from '@/i18n/routing'
 import { ArrowRight, Code2, Users, Zap } from 'lucide-react'
 
 export default function Hero() {
@@ -58,10 +57,10 @@ export default function Hero() {
               className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-medium group"
               asChild
             >
-              <Link href="#contact">
+              <a href="#contact">
                 {t('hero.cta.partnership')}
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </a>
             </Button>
             
             <Button 
@@ -70,9 +69,9 @@ export default function Hero() {
               className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-4 text-lg font-medium"
               asChild
             >
-              <Link href="#portfolio">
+              <a href="#portfolio">
                 {t('hero.cta.viewWork')}
-              </Link>
+              </a>
             </Button>
           </div>
         </div>

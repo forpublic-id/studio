@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import { Link } from '@/i18n/routing'
 import { useTranslations } from 'next-intl'
 import { Github, Twitter, Linkedin } from 'lucide-react'
 
@@ -69,28 +68,28 @@ export default function Footer({ variant = 'full', className = '' }: FooterProps
             <h4 className="font-semibold mb-4">{t('footer.sections.services')}</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
-                <Link
-                  href="/#services"
+                <a
+                  href="#services"
                   className="hover:text-white transition-colors"
                 >
                   {t('footer.links.digitalTransformation')}
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  href="/#services"
+                <a
+                  href="#services"
                   className="hover:text-white transition-colors"
                 >
                   {t('footer.links.ngoSolutions')}
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  href="/#services"
+                <a
+                  href="#services"
                   className="hover:text-white transition-colors"
                 >
                   {t('footer.links.publicTech')}
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -99,24 +98,24 @@ export default function Footer({ variant = 'full', className = '' }: FooterProps
             <h4 className="font-semibold mb-4">{t('footer.sections.company')}</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
-                <Link href="/#portfolio" className="hover:text-white transition-colors">
+                <a href="#portfolio" className="hover:text-white transition-colors">
                   {t('footer.links.portfolio')}
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="/#about" className="hover:text-white transition-colors">
+                <a href="#philosophy" className="hover:text-white transition-colors">
                   {t('footer.links.about')}
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="/#team" className="hover:text-white transition-colors">
+                <a href="#team" className="hover:text-white transition-colors">
                   {t('footer.links.team')}
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="/#process" className="hover:text-white transition-colors">
+                <a href="#process" className="hover:text-white transition-colors">
                   {t('footer.links.process')}
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

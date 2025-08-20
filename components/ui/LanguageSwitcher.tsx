@@ -18,7 +18,7 @@ export function LanguageSwitcher() {
     router.push(pathname, { locale: newLocale })
   }
 
-  const currentLanguage = languages.find((lang) => lang.code === locale)
+  // const currentLanguage = languages.find((lang) => lang.code === locale)
 
   return (
     <div className="flex space-x-1 border border-gray-200 rounded-lg p-1">
