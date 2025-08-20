@@ -1,0 +1,447 @@
+{
+  "header": {
+    "brand": "ForPublic.id",
+    "nav": {
+      "home": "Beranda",
+      "services": "Layanan",
+      "portfolio": "Portfolio", 
+      "about": "Tentang",
+      "contact": "Kontak"
+    }
+  },
+  "hero": {
+    "badge": "Public Good Software Studio",
+    "title": "Membangun Teknologi",
+    "titleHighlight": "untuk Rakyat",
+    "description": "Membangun teknologi yang transparan, mudah diakses, dan melayani komunitas. Studio kolaborasi untuk solusi digital yang berfokus pada kepentingan publik.",
+    "cta": {
+      "partnership": "Mulai Partnership",
+      "viewWork": "Lihat Karya Kami"
+    }
+  },
+  "services": {
+    "title": "Layanan Kami",
+    "description": "Solusi teknologi khusus untuk pemerintah, NGO, dan organisasi yang fokus pada kepentingan publik",
+    "items": {
+      "digitalTransformation": {
+        "title": "Transformasi Digital Pemerintah",
+        "description": "Platform transparansi, digitalisasi layanan publik",
+        "features": [
+          "Sistem manajemen data publik",
+          "Portal transparansi pemerintah",
+          "Digitalisasi layanan administrasi",
+          "Dashboard analitik untuk pengambilan keputusan"
+        ]
+      },
+      "ngoSolutions": {
+        "title": "Solusi NGO & Non-Profit",
+        "description": "Tracking dampak, tools engagement komunitas",
+        "features": [
+          "Sistem manajemen program sosial",
+          "Platform crowdfunding dan donasi",
+          "Tools monitoring dan evaluasi",
+          "Community engagement platform"
+        ]
+      },
+      "publicInterestTech": {
+        "title": "Public Interest Technology",
+        "description": "Pendidikan, kesehatan, solusi lingkungan",
+        "features": [
+          "Sistem informasi kesehatan masyarakat",
+          "Platform e-learning dan edukasi",
+          "Environmental monitoring tools",
+          "Civic engagement applications"
+        ]
+      }
+    }
+  },
+  "philosophy": {
+    "title": "Filosofi & Pendekatan",
+    "description": "Prinsip pengembangan yang mengutamakan kepentingan publik",
+    "principles": {
+      "openSource": {
+        "title": "Open Source First",
+        "description": "Mengembangkan solusi terbuka yang dapat diakses dan dikontribusi oleh komunitas"
+      },
+      "communityCentered": {
+        "title": "Community-Centered",
+        "description": "Setiap solusi dirancang dengan melibatkan langsung komunitas pengguna"
+      },
+      "accessibility": {
+        "title": "Accessibility Priority", 
+        "description": "Memastikan teknologi dapat diakses oleh semua lapisan masyarakat"
+      }
+    },
+    "approach": {
+      "title": "Model Kolaborasi",
+      "coDesign": {
+        "title": "Co-Design",
+        "description": "Merancang bersama dengan stakeholder dan pengguna akhir"
+      },
+      "agile": {
+        "title": "Agile Development",
+        "description": "Pengembangan iteratif dengan feedback berkelanjutan"
+      },
+      "capacityBuilding": {
+        "title": "Capacity Building",
+        "description": "Transfer knowledge dan pemberdayaan tim lokal"
+      }
+    },
+    "pricing": {
+      "title": "Flexible Pricing",
+      "description": "Model harga yang dapat disesuaikan dengan kemampuan organisasi",
+      "options": [
+        "Sliding scale berdasarkan budget organisasi",
+        "Pro-bono untuk inisiatif high-impact",
+        "Partnership model untuk sustainability jangka panjang"
+      ]
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio & Showcase",
+    "description": "Karya nyata yang memberikan dampak positif untuk masyarakat",
+    "ecosystem": {
+      "title": "ForPublic.id Ecosystem",
+      "items": {
+        "holiday": {
+          "title": "Holiday Calendar",
+          "description": "Kalender hari libur Indonesia dengan data akurat dan API terbuka",
+          "impact": "100K+ pengguna bulanan",
+          "tech": ["Next.js", "TypeScript", "Vercel"]
+        },
+        "budget": {
+          "title": "Budget Transparency",
+          "description": "Platform transparansi anggaran pemerintah dengan visualisasi interaktif",
+          "impact": "Segera Hadir",
+          "tech": ["React", "D3.js", "PostgreSQL"]
+        },
+        "salary": {
+          "title": "Public Salary Database",
+          "description": "Database gaji PNS dan pejabat publik untuk transparansi",
+          "impact": "Segera Hadir", 
+          "tech": ["Next.js", "Prisma", "Supabase"]
+        },
+        "plan": {
+          "title": "Development Plans",
+          "description": "Akses RTRW dan rencana pembangunan dengan fitur partisipasi publik",
+          "impact": "Segera Hadir",
+          "tech": ["GIS", "MapBox", "PostgreSQL"]
+        }
+      }
+    },
+    "achievements": {
+      "title": "Technical Achievements",
+      "items": [
+        {
+          "metric": "99.9%",
+          "label": "Uptime",
+          "description": "Reliabilitas sistem untuk layanan publik"
+        },
+        {
+          "metric": "< 2s",
+          "label": "Load Time",
+          "description": "Performa optimal untuk akses cepat"
+        },
+        {
+          "metric": "100%",
+          "label": "Mobile Ready",
+          "description": "Semua aplikasi responsive dan mobile-first"
+        },
+        {
+          "metric": "WCAG 2.1",
+          "label": "Accessibility",
+          "description": "Standar aksesibilitas internasional"
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "Client Testimonials",
+      "items": [
+        {
+          "quote": "Solusi yang sangat membantu dalam transparansi data publik. Tim sangat responsif dan memahami kebutuhan.",
+          "author": "Pejabat Pemerintah Daerah",
+          "role": "Government Official",
+          "organization": "Placeholder"
+        },
+        {
+          "quote": "Platform yang user-friendly dan sangat membantu dalam monitoring program kami.",
+          "author": "NGO Coordinator",
+          "role": "Program Manager",
+          "organization": "Placeholder"
+        }
+      ]
+    }
+  },
+  "process": {
+    "title": "Proses Kolaborasi",
+    "description": "Langkah sistematis untuk menghasilkan solusi teknologi yang tepat sasaran",
+    "steps": {
+      "assessment": {
+        "title": "Impact Assessment",
+        "description": "Analisis mendalam kebutuhan dan potensi dampak solusi",
+        "duration": "1-2 minggu",
+        "deliverables": [
+          "Requirements analysis",
+          "Stakeholder mapping",
+          "Impact measurement framework",
+          "Technical feasibility study"
+        ]
+      },
+      "coDesign": {
+        "title": "Co-Design",
+        "description": "Merancang solusi bersama stakeholder dan pengguna",
+        "duration": "2-3 minggu",
+        "deliverables": [
+          "User journey mapping",
+          "Wireframes dan prototypes",
+          "Technical architecture",
+          "Project timeline dan milestones"
+        ]
+      },
+      "development": {
+        "title": "Agile Development",
+        "description": "Pengembangan iteratif dengan feedback berkelanjutan",
+        "duration": "8-12 minggu",
+        "deliverables": [
+          "MVP (Minimum Viable Product)",
+          "Testing dan quality assurance",
+          "Documentation lengkap",
+          "Training materials"
+        ]
+      },
+      "support": {
+        "title": "Launch & Support",
+        "description": "Deployment, monitoring, dan dukungan berkelanjutan",
+        "duration": "Ongoing",
+        "deliverables": [
+          "Production deployment",
+          "Monitoring dan analytics setup",
+          "User training dan onboarding",
+          "Maintenance dan updates"
+        ]
+      }
+    },
+    "timeline": {
+      "title": "Timeline Examples",
+      "small": {
+        "title": "Small Project",
+        "duration": "6-8 minggu",
+        "description": "Dashboard sederhana, landing page, atau tools spesifik"
+      },
+      "medium": {
+        "title": "Medium Project", 
+        "duration": "3-4 bulan",
+        "description": "Platform multi-user, sistem manajemen data, atau aplikasi mobile"
+      },
+      "large": {
+        "title": "Large Project",
+        "duration": "6+ bulan",
+        "description": "Sistem enterprise, transformasi digital penuh, atau ecosystem platform"
+      }
+    },
+    "partnership": {
+      "title": "Model Partnership",
+      "description": "Berbagai cara untuk berkolaborasi sesuai kebutuhan dan budget",
+      "options": [
+        {
+          "title": "Fixed Price Project",
+          "description": "Budget tetap untuk scope yang jelas dan terdefinisi"
+        },
+        {
+          "title": "Retainer Partnership",
+          "description": "Kolaborasi jangka panjang dengan monthly retainer"
+        },
+        {
+          "title": "Revenue Sharing",
+          "description": "Partnership strategis dengan pembagian revenue atau impact"
+        },
+        {
+          "title": "Grant-Funded",
+          "description": "Proyek yang didanai grant atau hibah untuk social impact"
+        }
+      ]
+    }
+  },
+  "team": {
+    "title": "Tim & Expertise",
+    "description": "Tim berpengalaman dengan fokus pada public-good technology",
+    "competencies": {
+      "title": "Core Competencies",
+      "items": [
+        {
+          "title": "Full-Stack Development",
+          "description": "Modern web technologies untuk solusi end-to-end",
+          "tech": ["React/Next.js", "Node.js", "PostgreSQL", "TypeScript", "Python"]
+        },
+        {
+          "title": "Public-Good UX/UI",
+          "description": "Design yang mengutamakan accessibility dan usability",
+          "tech": ["Figma", "Design Systems", "WCAG Guidelines", "User Research"]
+        },
+        {
+          "title": "Data Analytics & Visualization",
+          "description": "Mengubah data kompleks menjadi insight yang actionable",
+          "tech": ["D3.js", "Python", "R", "Tableau", "Power BI"]
+        },
+        {
+          "title": "DevOps & Infrastructure", 
+          "description": "Deployment yang reliable dan scalable",
+          "tech": ["Vercel", "AWS", "Docker", "CI/CD", "Monitoring"]
+        }
+      ]
+    },
+    "expertise": {
+      "title": "Technology Expertise",
+      "description": "Stack teknologi yang aligned dengan kebutuhan public service",
+      "frontend": {
+        "title": "Frontend",
+        "items": ["Next.js", "React", "TypeScript", "Tailwind CSS", "PWA"]
+      },
+      "backend": {
+        "title": "Backend", 
+        "items": ["Node.js", "Python", "PostgreSQL", "Prisma", "Supabase"]
+      },
+      "data": {
+        "title": "Data & Analytics",
+        "items": ["D3.js", "Chart.js", "Python", "R", "SQL"]
+      },
+      "infrastructure": {
+        "title": "Infrastructure",
+        "items": ["Vercel", "AWS", "Docker", "GitHub Actions", "Monitoring"]
+      }
+    },
+    "openSource": {
+      "title": "Open Source Contributions",
+      "description": "Kontribusi aktif untuk komunitas developer dan public good",
+      "contributions": [
+        "ForPublic.id ecosystem - Platform transparansi untuk Indonesia",
+        "Public data APIs - Open APIs untuk data publik", 
+        "Accessibility tools - Libraries untuk aksesibilitas web",
+        "Government tech templates - Starter templates untuk gov tech"
+      ]
+    },
+    "community": {
+      "title": "Community Involvement",
+      "description": "Keterlibatan aktif dalam komunitas tech for good",
+      "activities": [
+        "Speaker di konferensi civic tech dan government innovation",
+        "Mentor untuk startup social impact dan non-profit",
+        "Kontributor dalam policy discussions untuk digital governance",
+        "Organizer workshop untuk capacity building NGO dan pemerintah"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Mulai Partnership",
+    "description": "Mari diskusikan bagaimana teknologi dapat memberikan dampak positif untuk komunitas Anda",
+    "consultation": {
+      "title": "Free Consultation",
+      "description": "Konsultasi gratis 30 menit untuk diskusi kebutuhan dan peluang",
+      "features": [
+        "Problem assessment",
+        "Technology recommendations", 
+        "Rough timeline & budget estimate",
+        "Partnership options"
+      ]
+    },
+    "form": {
+      "title": "Partnership Inquiry",
+      "fields": {
+        "name": {
+          "label": "Nama Lengkap",
+          "placeholder": "Masukkan nama lengkap Anda"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "nama@organisasi.com"
+        },
+        "organization": {
+          "label": "Organisasi",
+          "placeholder": "Nama organisasi/instansi"
+        },
+        "role": {
+          "label": "Posisi/Jabatan",
+          "placeholder": "Posisi Anda di organisasi"
+        },
+        "type": {
+          "label": "Jenis Organisasi",
+          "options": {
+            "government": "Pemerintah",
+            "ngo": "NGO/Non-Profit",
+            "international": "Organisasi Internasional", 
+            "civic": "Civic Group",
+            "other": "Lainnya"
+          }
+        },
+        "project": {
+          "label": "Deskripsi Proyek",
+          "placeholder": "Ceritakan tentang kebutuhan atau tantangan yang ingin diselesaikan..."
+        },
+        "budget": {
+          "label": "Budget Range",
+          "options": {
+            "small": "< $10,000",
+            "medium": "$10,000 - $50,000",
+            "large": "$50,000 - $100,000",
+            "enterprise": "> $100,000",
+            "grant": "Grant-funded",
+            "discuss": "Mari diskusikan"
+          }
+        },
+        "timeline": {
+          "label": "Timeline",
+          "options": {
+            "urgent": "< 1 bulan",
+            "fast": "1-3 bulan",
+            "normal": "3-6 bulan",
+            "flexible": "6+ bulan",
+            "discuss": "Flexible"
+          }
+        }
+      },
+      "submit": "Kirim Partnership Inquiry",
+      "booking": {
+        "title": "Book Free Consultation",
+        "description": "Schedule 30-minute call untuk diskusi awal"
+      }
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "studio@forpublic.id",
+      "response": "Response time: < 24 hours",
+      "availability": "Available for international partnerships",
+      "timezone": "Based in Indonesia (UTC+7)"
+    },
+    "social": {
+      "title": "Connect With Us",
+      "links": {
+        "github": "Follow our work",
+        "linkedin": "Professional updates",
+        "twitter": "Latest updates"
+      }
+    }
+  },
+  "footer": {
+    "description": "Public Good Software Studio - Membangun teknologi untuk kepentingan rakyat.",
+    "sections": {
+      "services": "Layanan",
+      "company": "Perusahaan",
+      "resources": "Resources"
+    },
+    "links": {
+      "digitalTransformation": "Transformasi Digital",
+      "ngoSolutions": "Solusi NGO",
+      "publicTech": "Public Interest Tech",
+      "portfolio": "Portfolio",
+      "about": "Tentang Kami",
+      "process": "Proses Kerja",
+      "team": "Tim",
+      "blog": "Blog",
+      "openSource": "Open Source",
+      "mainWebsite": "ForPublic.id"
+    },
+    "connect": "Connect",
+    "email": "studio@forpublic.id",
+    "copyright": "© 2024 ForPublic.id Studio. Semua hak dilindungi. Dibuat dengan ❤️ untuk kepentingan publik."
+  }
+}
