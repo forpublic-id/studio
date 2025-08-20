@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import { routing } from '@/i18n/routing'
+import { Analytics } from '@/lib/analytics'
+import { StructuredData } from '@/components/seo/StructuredData'
 import type { Metadata } from 'next'
 
 type Props = {
@@ -17,10 +19,12 @@ export async function generateMetadata({
   const { locale } = await params
   // const t = await getTranslations({ locale })
   
+  const baseUrl = 'https://studio.forpublic.id'
   const title = 'ForPublic.id Studio - Public Good Software Development'
   const description = 'Public Good Software Studio - Building transparent, accessible technology that serves communities. Partnership hub for government, NGO, and civic organizations.'
   
   return {
+    metadataBase: new URL(baseUrl),
     title,
     description,
     keywords: [
@@ -28,16 +32,15 @@ export async function generateMetadata({
       'government technology',
       'NGO solutions', 
       'civic technology',
-      'transparency platform',
-      'public interest technology',
-      'Indonesia government tech',
-      'open source government',
       'digital transformation',
-      'public sector innovation'
+      'transparency platform',
+      'public interest tech',
+      'Indonesia software development',
+      'forpublic.id'
     ],
     authors: [{ name: 'ForPublic.id Studio' }],
-    creator: 'ForPublic.id',
-    publisher: 'ForPublic.id',
+    creator: 'ForPublic.id Studio',
+    publisher: 'ForPublic.id Studio',
     robots: {
       index: true,
       follow: true,
@@ -51,9 +54,8 @@ export async function generateMetadata({
     },
     openGraph: {
       type: 'website',
-      locale: locale,
-      alternateLocale: locale === 'id' ? 'en' : 'id',
-      url: `https://studio.forpublic.id/${locale}`,
+      locale: locale === 'id' ? 'id_ID' : 'en_US',
+      url: `${baseUrl}/${locale}`,
       siteName: 'ForPublic.id Studio',
       title,
       description,
@@ -62,24 +64,26 @@ export async function generateMetadata({
           url: '/og-image.png',
           width: 1200,
           height: 630,
-          alt: title,
+          alt: 'ForPublic.id Studio - Public Good Software Development',
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      site: '@forpublicid',
-      creator: '@forpublicid',
       title,
       description,
+      creator: '@forpublicid',
       images: ['/og-image.png'],
     },
     alternates: {
-      canonical: `https://studio.forpublic.id/${locale}`,
+      canonical: `${baseUrl}/${locale}`,
       languages: {
-        id: 'https://studio.forpublic.id/id',
-        en: 'https://studio.forpublic.id/en',
+        'id': `${baseUrl}/id`,
+        'en': `${baseUrl}/en`,
       },
+    },
+    verification: {
+      google: process.env.GOOGLE_SITE_VERIFICATION,
     },
   }
 }
@@ -103,6 +107,11 @@ export default async function LocaleLayout({
           {children}
         </main>
         <Footer />
+        <Analytics 
+          gaId={process.env.NEXT_PUBLIC_GA_ID}
+          gtmId={process.env.NEXT_PUBLIC_GTM_ID}
+        />
+        <StructuredData locale={locale} />
       </div>
     </NextIntlClientProvider>
   )

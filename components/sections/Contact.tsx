@@ -5,6 +5,7 @@ import { Card } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
+import { trackPartnershipInquiry, trackContactForm } from '@/lib/analytics'
 import { 
   Mail,
   Clock,
@@ -21,6 +22,22 @@ import {
 
 export default function Contact() {
   const t = useTranslations()
+
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    const formData = new FormData(e.currentTarget)
+    const organizationType = formData.get('organization_type') as string
+    
+    trackPartnershipInquiry(organizationType)
+    trackContactForm('partnership_inquiry')
+    
+    // Here you would normally send the form data to your backend
+    console.log('Form submitted:', Object.fromEntries(formData))
+  }
+
+  const handleConsultationClick = () => {
+    trackContactForm('free_consultation')
+  }
   
   const consultationFeatures = t.raw('contact.consultation.features')
   
@@ -90,7 +107,10 @@ export default function Contact() {
                 ))}
               </div>
               
-              <Button className="w-full bg-red-600 hover:bg-red-700 text-white">
+              <Button 
+                className="w-full bg-red-600 hover:bg-red-700 text-white"
+                onClick={handleConsultationClick}
+              >
                 {t('contact.form.booking.title')}
               </Button>
             </Card>
@@ -164,7 +184,7 @@ export default function Contact() {
                 {t('contact.form.title')}
               </h3>
               
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleFormSubmit}>
                 {/* Basic Info */}
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
@@ -173,8 +193,10 @@ export default function Contact() {
                     </label>
                     <Input
                       type="text"
+                      name="name"
                       placeholder={t('contact.form.fields.name.placeholder')}
                       className="w-full"
+                      required
                     />
                   </div>
                   <div>
@@ -217,7 +239,11 @@ export default function Contact() {
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     {t('contact.form.fields.type.label')}
                   </label>
-                  <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500">
+                  <select 
+                    name="organization_type" 
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                    required
+                  >
                     {organizationTypes.map((type) => (
                       <option key={type.value} value={type.value}>
                         {type.label}
