@@ -11,7 +11,7 @@ export default async function HomePage({ params }: HomePageProps) {
   
   return (
     <div className="min-h-screen">
-      <Hero locale={locale} />
+      <Hero />
       <TwoOptions locale={locale} />
       <ContactSimple locale={locale} />
     </div>

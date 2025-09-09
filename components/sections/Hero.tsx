@@ -1,15 +1,13 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 import { ArrowRight, Code2, Users, Zap } from 'lucide-react'
 import { Link } from '@/i18n/routing'
 
-interface HeroProps {
-  locale: string
-}
-
-export default function Hero({ locale }: HeroProps) {
+export default function Hero() {
+  const t = useTranslations('hero')
 
   return (
     <section className="relative bg-gradient-to-br from-gray-50 via-white to-gray-50 py-32 md:py-48 px-4 md:px-6 lg:px-8 overflow-hidden">
@@ -28,15 +26,15 @@ export default function Hero({ locale }: HeroProps) {
               className="text-gray-900 border-gray-300 bg-gray-100 px-4 py-2 text-sm font-medium"
             >
               <Code2 className="w-4 h-4 mr-2" />
-{locale === 'id' ? 'ForPublic.id Studio' : 'ForPublic.id Studio'}
+              {t('badge')}
             </Badge>
           </div>
           
           {/* Title */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight">
-            {locale === 'id' ? 'Membangun Teknologi' : 'We Build Technology'}
+            {t('title')}
             <span className="text-gray-900 relative block mt-2">
-              {locale === 'id' ? 'untuk Rakyat' : 'for Public Good'}
+              {t('titleHighlight')}
               <svg
                 className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-full max-w-md h-3 text-gray-300"
                 viewBox="0 0 100 12"
@@ -50,9 +48,7 @@ export default function Hero({ locale }: HeroProps) {
           
           {/* Description */}
           <p className="text-xl md:text-2xl text-gray-600 mb-16 max-w-2xl mx-auto leading-relaxed">
-            {locale === 'id' 
-              ? 'Layanan pengembangan software profesional untuk lembaga pemerintah, NGO, dan organisasi yang menciptakan dampak sosial positif.'
-              : 'Professional software development services for government agencies, NGOs, and organizations creating positive social impact.'}
+            {t('description')}
           </p>
           
           {/* CTAs */}
@@ -62,8 +58,8 @@ export default function Hero({ locale }: HeroProps) {
               className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 text-lg font-medium group"
               asChild
             >
-              <a href="#hire">
-                {locale === 'id' ? 'Mulai Sekarang' : 'Get Started'}
+              <a href="#contact">
+                {t('cta.partnership')}
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
@@ -75,7 +71,7 @@ export default function Hero({ locale }: HeroProps) {
               asChild
             >
               <Link href="/work">
-                {locale === 'id' ? 'Lihat Portfolio' : 'View Our Work'}
+                {t('cta.viewWork')}
               </Link>
             </Button>
           </div>
@@ -88,10 +84,10 @@ export default function Hero({ locale }: HeroProps) {
               <Users className="w-6 h-6 text-gray-700" />
             </div>
             <h3 className="font-semibold text-gray-900 mb-2">
-              {locale === 'id' ? 'Pemerintah & NGO' : 'Government & NGO'}
+              Government & NGO
             </h3>
             <p className="text-sm text-gray-600">
-              {locale === 'id' ? 'Solusi khusus untuk organisasi sektor publik' : 'Specialized solutions for public sector organizations'}
+              Specialized solutions for public sector organizations
             </p>
           </div>
           
@@ -100,10 +96,10 @@ export default function Hero({ locale }: HeroProps) {
               <Code2 className="w-6 h-6 text-blue-600" />
             </div>
             <h3 className="font-semibold text-gray-900 mb-2">
-              {locale === 'id' ? 'Open Source Pertama' : 'Open Source First'}
+              Open Source First
             </h3>
             <p className="text-sm text-gray-600">
-              {locale === 'id' ? 'Pendekatan pengembangan transparan dan berbasis komunitas' : 'Transparent, community-driven development approach'}
+              Transparent, community-driven development approach
             </p>
           </div>
           
@@ -112,10 +108,10 @@ export default function Hero({ locale }: HeroProps) {
               <Zap className="w-6 h-6 text-green-600" />
             </div>
             <h3 className="font-semibold text-gray-900 mb-2">
-              {locale === 'id' ? 'Dampak Tinggi' : 'High Impact'}
+              High Impact
             </h3>
             <p className="text-sm text-gray-600">
-              {locale === 'id' ? 'Solusi teknologi yang menciptakan perubahan sosial nyata' : 'Technology solutions that create real social change'}
+              Technology solutions that create real social change
             </p>
           </div>
         </div>

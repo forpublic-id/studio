@@ -46,24 +46,42 @@ export function LanguageSwitcher({ currentLocale }: { currentLocale: string }) {
         size="sm"
         className="flex items-center gap-2 border-gray-200 hover:border-gray-600 bg-transparent"
         disabled={isPending}
+        aria-label={`Current language: ${currentLanguage?.name}. Click to change language`}
+        aria-haspopup="true"
+        aria-expanded="false"
+        role="button"
       >
-        <Globe className="w-4 h-4" />
+        <Globe className="w-4 h-4" aria-hidden="true" />
         <span className="hidden sm:inline">{isPending ? 'Loading...' : currentLanguage?.name}</span>
-        <span className="sm:hidden">{currentLanguage?.flag}</span>
+        <span className="sm:hidden" role="img" aria-label={currentLanguage?.name}>
+          {currentLanguage?.flag}
+        </span>
       </Button>
 
-      <div className="absolute right-0 top-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 min-w-[140px]">
+      <div 
+        className="absolute right-0 top-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 min-w-[140px]"
+        role="menu"
+        aria-label="Language selection menu"
+      >
         {languages.map(language => (
           <button
             key={language.code}
             onClick={() => handleLanguageChange(language.code)}
             disabled={isPending || locale === language.code}
-            className={`w-full px-3 py-2 text-left text-sm hover:bg-gray-50 first:rounded-t-lg last:rounded-b-lg flex items-center gap-2 transition-colors disabled:opacity-50 cursor-pointer ${
+            className={`w-full px-3 py-2 text-left text-sm hover:bg-gray-50 first:rounded-t-lg last:rounded-b-lg flex items-center gap-2 transition-colors disabled:opacity-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-inset ${
               locale === language.code ? 'bg-gray-50 text-gray-900' : 'text-gray-700'
             }`}
+            role="menuitem"
+            aria-current={locale === language.code ? 'true' : 'false'}
+            tabIndex={0}
           >
-            <span>{language.flag}</span>
+            <span role="img" aria-label={`${language.name} flag`}>
+              {language.flag}
+            </span>
             <span>{language.name}</span>
+            {locale === language.code && (
+              <span className="ml-auto" aria-hidden="true">✓</span>
+            )}
           </button>
         ))}
       </div>

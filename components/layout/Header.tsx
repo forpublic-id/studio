@@ -2,14 +2,25 @@
 
 import { Button } from '@/components/ui/Button'
 import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher'
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from '@/components/ui/Sheet'
 import { Link } from '@/i18n/routing'
+import { useMobileMenu } from '@/lib/store/useAppStore'
 import Image from 'next/image'
+import { Menu } from 'lucide-react'
 
 interface HeaderProps {
   currentLocale: string
 }
 
 export default function Header({ currentLocale }: HeaderProps) {
+  const { isOpen: isMobileMenuOpen, setOpen: setIsMobileMenuOpen } = useMobileMenu()
+
+  const navigationItems = [
+    { href: '/', label: currentLocale === 'id' ? 'Beranda' : 'Home' },
+    { href: '/work', label: currentLocale === 'id' ? 'Portfolio' : 'Work' },
+    { href: '/about', label: currentLocale === 'id' ? 'Tentang' : 'About' },
+    { href: '/how-we-work', label: currentLocale === 'id' ? 'Cara Kerja' : 'How We Work' },
+  ]
 
   return (
     <header className="border-b bg-white shadow-sm sticky top-0 z-50">
@@ -31,7 +42,7 @@ export default function Header({ currentLocale }: HeaderProps) {
           </div>
           <div className="flex flex-col min-w-0">
             <span className="text-xl font-bold text-gray-900 whitespace-nowrap">
-              {currentLocale === 'id' ? 'ForPublic.id Studio' : 'ForPublic.id Studio'}
+              ForPublic.id Studio
             </span>
             <span className="text-xs text-gray-600 font-medium whitespace-nowrap">
               {currentLocale === 'id' ? 'Layanan Pengembangan Software' : 'Software Development Services'}
@@ -39,39 +50,19 @@ export default function Header({ currentLocale }: HeaderProps) {
           </div>
         </Link>
         
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          <Link 
-            href="/" 
-            className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
-          >
-            <span className="whitespace-nowrap">
-              {currentLocale === 'id' ? 'Beranda' : 'Home'}
-            </span>
-          </Link>
-          <Link 
-            href="/work" 
-            className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
-          >
-            <span className="whitespace-nowrap">
-              {currentLocale === 'id' ? 'Portfolio' : 'Work'}
-            </span>
-          </Link>
-          <Link 
-            href="/about" 
-            className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
-          >
-            <span className="whitespace-nowrap">
-              {currentLocale === 'id' ? 'Tentang' : 'About'}
-            </span>
-          </Link>
-          <Link 
-            href="/how-we-work" 
-            className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
-          >
-            <span className="whitespace-nowrap">
-              {currentLocale === 'id' ? 'Cara Kerja' : 'How We Work'}
-            </span>
-          </Link>
+          {navigationItems.map((item) => (
+            <Link 
+              key={item.href}
+              href={item.href as '/'}
+              className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
+            >
+              <span className="whitespace-nowrap">
+                {item.label}
+              </span>
+            </Link>
+          ))}
           
           <LanguageSwitcher currentLocale={currentLocale} />
           
@@ -87,13 +78,66 @@ export default function Header({ currentLocale }: HeaderProps) {
           </Button>
         </nav>
         
-        {/* Mobile menu button */}
+        {/* Mobile Menu */}
         <div className="md:hidden">
-          <Button variant="ghost" size="sm">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </Button>
+          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+            <SheetTrigger asChild>
+              <Button 
+                variant="ghost" 
+                size="sm"
+                aria-label="Open mobile menu"
+                className="p-2"
+              >
+                <Menu className="w-6 h-6" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-80 sm:w-96">
+              <SheetHeader className="text-left">
+                <SheetTitle className="text-lg font-bold">
+                  {currentLocale === 'id' ? 'Menu' : 'Menu'}
+                </SheetTitle>
+              </SheetHeader>
+              
+              <div className="mt-6 space-y-4">
+                {navigationItems.map((item) => (
+                  <SheetClose asChild key={item.href}>
+                    <Link
+                      href={item.href as '/'}
+                      className="block px-4 py-2 text-lg text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors duration-200"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  </SheetClose>
+                ))}
+                
+                <div className="border-t pt-4 mt-6">
+                  <div className="flex items-center justify-between px-4 py-2">
+                    <span className="text-sm text-gray-600">
+                      {currentLocale === 'id' ? 'Bahasa' : 'Language'}
+                    </span>
+                    <LanguageSwitcher currentLocale={currentLocale} />
+                  </div>
+                </div>
+                
+                <div className="pt-4">
+                  <SheetClose asChild>
+                    <Button
+                      className="w-full bg-gray-900 hover:bg-gray-800 text-white"
+                      asChild
+                    >
+                      <a 
+                        href="#contact"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {currentLocale === 'id' ? 'Kontak Kami' : 'Contact Us'}
+                      </a>
+                    </Button>
+                  </SheetClose>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
